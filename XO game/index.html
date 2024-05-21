@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X/O Game</title>
+    <script defer src="XOGame.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="players_info">
+      <span class="player_1 activePlayerColor"></span>
+      <span class="player_2"></span>
+    </div>
+    <div class="grid xo_container">
+      <div class="xo_field topLeft bCl bSt" data-field="1"></div>
+      <div class="xo_field topMid bCl bSt" data-field="2"></div>
+      <div class="xo_field topRight bCl bSt" data-field="3"></div>
+      <div class="xo_field midLeft bCl bSt" data-field="4"></div>
+      <div class="xo_field midMid bCl bSt" data-field="5"></div>
+      <div class="xo_field midRight bCl bSt" data-field="6"></div>
+      <div class="xo_field bottomLeft bCl bSt" data-field="7"></div>
+      <div class="xo_field bottomMid bCl bSt" data-field="8"></div>
+      <div class="xo_field bottomRight bCl bSt" data-field="9"></div>
+    </div>
+    <div class="winning_info"></div>
+    <button class="new_game_btn">New game!</button>
+  </body>
+</html>

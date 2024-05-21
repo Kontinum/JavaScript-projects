@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Api</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .errMessage {
+        display: block;
+        padding-top: 10px;
+      }
+      .spinner {
+        width: 25px;
+        display: none;
+      }
+    </style>
+    <script type="module" defer src="bookApi.js"></script>
+  </head>
+  <body>
+    <h3>
+      Search first sentence in book!
+      <span class="red">:)</span>
+    </h3>
+    <input type="text" class="bookTitle" placeholder="Enter book title" />
+    <button type="button" class="bookSearchBtn">Search</button>
+    <br />
+    <span class="red errMessage"></span>
+    <span class="results"></span>
+    <img
+      class="spinner"
+      src="https://i.pinimg.com/originals/3e/f0/e6/3ef0e69f3c889c1307330c36a501eb12.gif"
+      alt=""
+    />
+  </body>
+</html>

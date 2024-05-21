@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
+body * {
+  font-family: "Rock Salt", cursive;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+}
+.bCl {
+  border-color: aqua;
+}
+.bSt {
+  border-style: solid;
+}
+.topLeft {
+  /* top right bottom left */
+  border-width: 0px 3px 3px 0px;
+}
+.topMid {
+  border-width: 0px 0px 3px 0px;
+}
+.topRight {
+  border-width: 0px 0px 3px 3px;
+}
+.midLeft {
+  border-width: 0px 3px 3px 0px;
+}
+.midRight {
+  border-width: 0px 0px 3px 3px;
+}
+.midMid {
+  border-width: 0px 0px 3px 0px;
+}
+.bottomLeft {
+  border-width: 0px 3px 0px 0px;
+}
+.bottomMid {
+  border-width: 0px 0px 0px 0px;
+}
+.bottomRight {
+  border-width: 0px 0px 0px 3px;
+}
+.xo_field {
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  font-size: xx-large;
+  font-style: italic;
+}
+.players_info {
+  height: 80px;
+  font-size: large;
+}
+.player_1 {
+  margin-right: 50px;
+}
+.activePlayerColor {
+  color: aqua;
+}
+.strikeWinner {
+  text-decoration: line-through;
+}
+.winning_info {
+  margin-top: 50px;
+  margin-right: 20px;
+  font-size: x-large;
+  display: inline;
+}
+.new_game_btn {
+  display: none;
+}
+
+.strikeWinner,
+.winning_info {
+  color: red;
+}
