@@ -1,100 +1,106 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
 
-  footer {
-    position: fixed;
-    bottom:0;
-    left:0;
-    right:0;
-  }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-  .search-container, .ingredient-info {
-    min-height: 100vh;
-  }
+.search-container,
+.ingredient-info {
+  min-height: 100vh;
+}
 
-  .header .icon {
-    font-size: xx-large;
-  }
-  .brand-logo {
-    font-family: "Chewy", sans-serif;
-    font-style: normal;
-  }
+.header .icon {
+  font-size: xx-large;
+}
+.brand-logo {
+  font-family: "Chewy", sans-serif;
+  font-style: normal;
+}
 
-  .page-footer {
-    padding: 15px;
-  }
+.page-footer {
+  padding: 15px;
+}
 
- .row {
-  margin: 0px;
- }
+.search-result {
+  margin: 2px !important;
+}
+.search-result .row {
+  margin: 0px !important;
+}
 
- .search-result {
-  margin: 2px;
- }
-
- .search-result:hover {
+.search-result:hover {
   cursor: pointer;
-  background-color:#eeeeee !important; 
- }
+  background-color: #eeeeee !important;
+}
 
- .results-count {
-  font-size:small;
+.results-count {
+  font-size: small;
   font-style: italic;
   opacity: 0.5;
   margin-bottom: 5px;
- }
+}
 
- .site-info, .ingredient-info-name {
+.site-info,
+.ingredient-info-name {
   font-size: large;
- }
+}
 
- .site-info ol {
+.site-info ol {
   font-style: italic;
- }
+}
 
- .ingredient-info-name {
+.ingredient-info-name {
   margin-top: 10px;
- }
+}
 
- .percentage-info, .nutrition-tables, .glycemic-info {
+.percentage-info,
+.nutrition-tables,
+.glycemic-info {
   margin-top: 20px;
- }
+}
 
- .big-percent, .big-glycemic {
+.big-percent,
+.big-glycemic {
   display: block;
   font-size: 400%;
   color: cornflowerblue;
- }
+}
 
- .big-glycemic {
+.big-glycemic {
   font-size: 350%;
- }
+}
 
- .ingredient-header {
+.ingredient-header {
   margin-bottom: 10px;
- }
+}
 
- .percentage-info-nutrient, .glycemic-info-name {
+.percentage-info-nutrient,
+.glycemic-info-name {
   font-style: italic;
   font-weight: bold;
- }
+}
 
- .percentage-box, .glycemic-box {
+.percentage-box,
+.glycemic-box {
   height: 130px;
- }
+}
 
- .daily-need-percent {
+.daily-need-percent {
   text-align: right;
- }
+}
 
- @media only screen and (max-width: 515px) {
+@media only screen and (max-width: 515px) {
   .header .icon {
     font-size: x-large;
   }
