@@ -1,0 +1,73 @@
+Build Oh those calories app using spoonacular API (27e7ec6064fd4b0881ee2c05c7fcb5f4)
+
+User wants to search for ingredients and find more info about them (nutrition facts, glycemic load).
+While searching for ingredients autocomplete will be provided (5 autocomplete results)
+
+Click on search button or enter will display 10 search results (image ingredient name)
+Click on ingredient from search results will load all information about that ingredient.
+
+Search ingredients link: GET
+	https://api.spoonacular.com/food/ingredients/search
+	https://api.spoonacular.com/food/ingredients/search?query=banana&number=2&sort=calories&sortDirection=desc
+	
+
+Autocomplete ingredients search link: GET
+	https://api.spoonacular.com/food/ingredients/autocomplete
+	https://api.spoonacular.com/food/ingredients/autocomplete?query=appl&number=5
+	
+Get ingredient data link: GET
+	https://api.spoonacular.com/food/ingredients/{id}/information
+	GET https://api.spoonacular.com/food/ingredients/9266/information?amount=1
+
+
+Get glycemic load link: POST
+	https://api.spoonacular.com/food/ingredients/glycemicLoad
+	{ "ingredients":[ "1 kiwi", "2 cups rice", "2 glasses of water" ] }
+	
+
+Image can be get through link:
+	https://img.spoonacular.com/ingredients_100x100/{image property search/get ingredient}
+	https://img.spoonacular.com/ingredients_100x100/apple.jpg
+
+When ingredient is loaded we can have special button to fetch glycemic load?
+
+Design:
+	Top of the page:
+		Width 100 div with app name
+	Left side:
+		search iput and button
+		under that will be the place for search results
+	Right side:
+		place to show all data from ingredient fetch
+		
+Use materialize css to design frontend
+
+Glycemic index calculation:
+	Low GI: 0-55
+	Medium GI: 55-69
+	High GI: 70-100
+	
+Glycemic load calculation
+	Low GL: 0-10
+	Medium GL: 11-19
+	High GL: 20+
+	
+NutriScore calculation
+	Solid (apple)
+		A: -15 to -1
+		B: 0 - 2
+		C: 3 - 10
+		D: 11 - 18
+		E: 19 - 40
+	
+	Liquid (apple juice)
+		A: water
+		B: <= 1
+		C: 2 - 5
+		D: 6 - 9
+		E: 10 - 40
+
+
+
+
+

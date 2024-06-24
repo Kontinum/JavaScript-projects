@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oh those calories!</title>
+
+    <link rel="stylesheet" href="style.css">
+  
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+
+    <script type="module" src="controller.js"></script>
+  <body>
+    <header>
+      <nav class="blue lighten-2">
+        <div class="nav-wrapper header">
+            <a href="#!" class="brand-logo center">
+                <i class="material-icons icon ">lunch_dining</i>
+                Oh those calories!
+            </a>
+        </div>
+     </nav>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col l3 m12 s12 grey lighten-5 search-container">
+          <div class="section right-align ingredient-search">
+            <div class="input-field">
+              <input list="ingredients" id="ingredient" type="text" class="validate search-term">
+              <datalist id="ingredients">
+              </datalist>
+              <label for="ingredient">Type ingredients...</label>
+            </div>
+            <a class="waves-effect waves-light btn-small search-ingredient-button">
+              <i class="material-icons left">search</i>Search
+            </a>
+          </div>
+          <div class="section">
+            <div class="progress hide">
+              <div class="indeterminate"></div>
+            </div>
+            <div class="search-error red-text hide">
+              <div class="col s12 center-align">
+                <i class="material-icons">warning</i>
+                <div class="search-error-message">eror while searching</div>
+              </div>
+            </div>
+            <div class="results-count hide">
+              You found 
+              <span class="count-no"></span> ingredient/s!
+            </div>
+            <div class="search-results"></div>
+            <!-- <div class="card-panel grey lighten-5 search-result">
+              <div class="row valign-wrapper">
+                <div class="col s2">
+                  <img src="images/banana.jpg" alt="" class="circle responsive-img">
+                </div>
+                <div class="col s10">
+                  <span class="black-text">
+                    Banana
+                  </span>
+                </div>
+              </div>
+            </div> -->
+          </div>     
+        </div>
+        <div class="col l9 m12 s12 content-container blue lighten-5">
+          <div class="section">
+            <div class="site-info">
+              <div class="row">
+                <div class="col s12">
+                  <h5>How to use Oh those calories!?</h3>
+                    <ol>
+                      <li>Search for ingredient.</li>
+                      <li>Click on ingredient from search results.</li>
+                      <li>Read more information about nutrition, glycemic data and so more...</li>
+                      <li>And most important! Don't blame yourself if you ate more calories than planned. <span class="emoji">&#128521;</span> </li>
+                    </ol>
+                </div>
+              </div>
+            </div>
+            <div class="row ingredient-loader hide">
+              <div class="col s12 center-align">
+                <div class="preloader-wrapper big active">
+                  <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div><div class="gap-patch">
+                      <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row ingredient-error red-text hide">
+              <div class="col s12 center-align">
+                <i class="material-icons">warning</i>
+                <div class="ingredient-error-message"></div>
+              </div>
+            </div>
+            <div class="ingredient-info">
+              
+              <!-- <div class="ingredient-header">
+                <div class="row">
+                  <div class="col s12 center-align">
+                    <img src="images/banana.jpg" alt="" class="circle responsive-img z-depth-3">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 center-align ingredient-info-name">
+                    Banana nutrient information
+                  </div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="row percentage-info">
+                <div class="col s3"></div>
+                <div class="col s2 center-align white z-depth-1 percentage-box">
+                  <span class="big-percent">1.8%</span>
+                  <span class="percentage-info-nutrient">protein</span>
+                </div>
+                <div class="col s2 center-align white z-depth-1 percentage-box">
+                  <span class="big-percent">2.65%</span>
+                  <span class="percentage-info-nutrient">fat</span>
+                </div>
+                <div class="col s2 center-align white z-depth-1 percentage-box">
+                  <span class="big-percent">95.55%</span>
+                  <span class="percentage-info-nutrient">carb</span>
+                </div>
+                <div class="col s3"></div>
+              </div>
+              <div class="row nutrition-tables">
+                  <div class="col s3"></div>
+                  <div class="col s3">
+                    <div class="nutrients">
+                      <table class="highlight">
+                        <thead>
+                          <tr>
+                            <th colspan="3" class="center-align">Nutrients</th>
+                          </tr>
+                          <tr>
+                              <th>Name</th>
+                              <th>Amount</th>
+                              <th class="right-align">Daily need %</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody>
+                          <tr>
+                            <td>Vitamin B5</td>
+                            <td>0.11mg</td>
+                            <td class="daily-need-percent">1.11</td>
+                          </tr>
+                          <tr>
+                            <td>Copper</td>
+                            <td>0.05mg</td>
+                            <td class="daily-need-percent">2.45</td>
+                          </tr>
+                          <tr>
+                            <td>Manganese</td>
+                            <td>0.05mg</td>
+                            <td class="daily-need-percent">3.18</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col s3">
+                    <div class="flavonoids">
+                      <table class="highlight">
+                        <thead>
+                          <tr>
+                            <th colspan="3" class="center-align">Flavonoids</th>
+                          </tr>
+                          <tr>
+                              <th>Name</th>
+                              <th class="right-align">Amount</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody>
+                          <tr>
+                            <td>Vitamin B5</td>
+                            <td class="right-align">0.11mg</td>
+                          </tr>
+                          <tr>
+                            <td>Copper</td>
+                            <td class="right-align">0.05mg</td>
+                          </tr>
+                          <tr>
+                            <td>Manganese</td>
+                            <td class="right-align">0.05mg</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col s3"></div>
+              </div>
+              <div class="row glycemic-info">
+                <div class="col s4"></div>
+                <div class="col s2 center-align white z-depth-1 glycemic-box">
+                  <span class="big-glycemic red-text">HIGH</span>
+                  <span class="glycemic-info-name">Glycemic index</span>
+                </div>
+                <div class="col s2 center-align white z-depth-1 glycemic-box">
+                  <span class="big-glycemic green-text">LOW</span>
+                  <span class="glycemic-info-name">Glycemic load</span>
+                </div>
+                <div class="col s4"></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>  
+      <!--<footer class="page-footer blue lighten-2 center-align">
+        © 2024 Dejan Pantelić
+      </footer> -->
+  </body>
+</html>
