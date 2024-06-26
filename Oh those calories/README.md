@@ -2,4 +2,4 @@ App to search for ingredients using Spoonacular API (https://spoonacular.com/foo
 
 Practicing some different architecture for JS project, using MVC.
 
-Link: https://oh-those-calories.netlify.app/
+Demo: https://oh-those-calories.netlify.app/
